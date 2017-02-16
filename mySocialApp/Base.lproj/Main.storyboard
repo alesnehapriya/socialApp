@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owx-GU-1Yy">
+                                <rect key="frame" x="28" y="126" width="265" height="163"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="47"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoU-0o-xJb">
+                                <rect key="frame" x="58" y="309" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="btc-XN-iM8"/>
+                                    <constraint firstAttribute="width" constant="79" id="gye-zk-Tsn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Sign Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d9-3R-aOZ">
+                                <rect key="frame" x="166" y="309" width="134" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XwH-KL-egS"/>
+                                    <segue destination="AdP-mZ-mCc" kind="modal" id="M8e-6T-ezU"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-qB-yTK">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.93322562170000001" green="0.65464644500000002" blue="0.64921854150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kZ4-Ah-0DO"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="bEL-wI-K2W">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="AdP-mZ-mCc" id="tsn-io-gsw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="211" style="plain" systemItem="fixedSpace" id="xv1-CD-vpk"/>
+                                    <barButtonItem title="Logout" id="SPY-NU-8vc">
+                                        <connections>
+                                            <action selector="logoutAction:" destination="AdP-mZ-mCc" id="r11-J9-bPR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.93322562170000001" green="0.65464644500000002" blue="0.64921854150000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.75628546990000001" blue="0.74930540830000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PKs-qB-yTK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="4b4-hT-pLP"/>
+                            <constraint firstItem="0d9-3R-aOZ" firstAttribute="top" secondItem="MoU-0o-xJb" secondAttribute="top" id="69m-sL-KeP"/>
+                            <constraint firstItem="MoU-0o-xJb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="6M2-7w-A3z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0d9-3R-aOZ" secondAttribute="trailing" constant="4" id="ATb-2p-ncs"/>
+                            <constraint firstItem="0d9-3R-aOZ" firstAttribute="top" secondItem="owx-GU-1Yy" secondAttribute="bottom" constant="20" id="JMF-Nh-NVC"/>
+                            <constraint firstItem="0d9-3R-aOZ" firstAttribute="firstBaseline" secondItem="MoU-0o-xJb" secondAttribute="baseline" id="Jds-eX-X0t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MoU-0o-xJb" secondAttribute="bottom" constant="141" id="ObQ-Qe-fai"/>
+                            <constraint firstItem="0d9-3R-aOZ" firstAttribute="baseline" secondItem="MoU-0o-xJb" secondAttribute="firstBaseline" id="P2e-vD-dZ8"/>
+                            <constraint firstItem="0d9-3R-aOZ" firstAttribute="leading" secondItem="MoU-0o-xJb" secondAttribute="trailing" constant="29" id="SjX-NV-fCe"/>
+                            <constraint firstItem="owx-GU-1Yy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="b1Q-kQ-eRq"/>
+                            <constraint firstItem="PKs-qB-yTK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eil-9k-iKz"/>
+                            <constraint firstItem="owx-GU-1Yy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="inc-Il-Msb"/>
+                            <constraint firstItem="owx-GU-1Yy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="ttt-wp-t8n"/>
+                            <constraint firstItem="PKs-qB-yTK" firstAttribute="centerX" secondItem="owx-GU-1Yy" secondAttribute="centerX" id="zap-rN-ass"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoutBtn" destination="SPY-NU-8vc" id="kTu-EV-9d7"/>
+                        <outlet property="refreshBtn" destination="bEL-wI-K2W" id="ffS-6P-AaX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="330"/>
+        </scene>
+        <!--Insta Home Page-->
+        <scene sceneID="WHr-Ud-l0R">
+            <objects>
+                <viewController id="AdP-mZ-mCc" customClass="instaHomePage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kSL-6o-uC9"/>
+                        <viewControllerLayoutGuide type="bottom" id="1NQ-NI-ZRt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4q-Nh-qGl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ea-Ha-2ew">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.93322562170000001" green="0.65464644500000002" blue="0.64921854150000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hoF-Fa-SLM"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="a8f-Hb-aZ3">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="AdP-mZ-mCc" id="B0S-ju-8EI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="211" style="plain" systemItem="fixedSpace" id="liZ-eG-obn"/>
+                                    <barButtonItem title="Logout" id="aF8-i3-l5q">
+                                        <connections>
+                                            <action selector="logoutAction:" destination="AdP-mZ-mCc" id="3kq-J3-ZaE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.93322562170000001" green="0.65464644500000002" blue="0.64921854150000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="IMG_7125.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="yHp-ly-BqA">
+                                <rect key="frame" x="0.0" y="41" width="320" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="2Rg-ad-HyM"/>
+                                    <constraint firstAttribute="width" constant="320" id="sWA-u7-h6N"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.75628546990000001" blue="0.74930540830000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yHp-ly-BqA" secondAttribute="trailing" id="GUM-Wf-XKi"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ea-Ha-2ew" secondAttribute="trailing" id="Mg1-EG-SQu"/>
+                            <constraint firstItem="2Ea-Ha-2ew" firstAttribute="bottom" secondItem="1NQ-NI-ZRt" secondAttribute="top" id="RIZ-07-hEX"/>
+                            <constraint firstItem="yHp-ly-BqA" firstAttribute="leading" secondItem="I4q-Nh-qGl" secondAttribute="leading" id="lVN-DX-Pfu"/>
+                            <constraint firstItem="2Ea-Ha-2ew" firstAttribute="leading" secondItem="I4q-Nh-qGl" secondAttribute="leading" id="ngn-2g-tbQ"/>
+                            <constraint firstItem="2Ea-Ha-2ew" firstAttribute="centerX" secondItem="yHp-ly-BqA" secondAttribute="centerX" id="rp2-1P-h9s"/>
+                            <constraint firstItem="yHp-ly-BqA" firstAttribute="top" secondItem="kSL-6o-uC9" secondAttribute="bottom" constant="21" id="sCf-8Y-TSA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagePic" destination="yHp-ly-BqA" id="Qt2-tE-zB5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6C-yu-n3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="307"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_7125.JPG" width="1079" height="1440"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
